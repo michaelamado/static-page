@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>My Website Home Page</title>
+</head>
+<body>
+  <h1>Welcome to my website</h1>
+  <p>Now hosted on Amazon S3!</p>
+    <!-- Noscript content for added SEO -->
+    <noscript><a href="https://www.eventbrite.com/e/testing-eb-driven-tickets-1045131846487" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+    <!-- You can customise this button any way you like -->
+    <button id="eventbrite-widget-modal-trigger-1045131846487" type="button">Buy Tickets</button>
+
+    <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+    <script type="text/javascript">
+        var exampleCallback = function() {
+            console.log('Order complete!');
+        };
+
+        window.EBWidgets.createWidget({
+            widgetType: 'checkout',
+            eventId: '1045131846487',
+            modal: true,
+            modalTriggerElementId: 'eventbrite-widget-modal-trigger-1045131846487',
+            onOrderComplete: exampleCallback
+        });
+    </script>
+</body>
+</html>
